@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tejas Jagadale - Full Stack Web Developer Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+            transition: color 0.3s ease;
+        }
+
+        .typing-animation {
+            border-right: 2px solid #667eea;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50% { border-color: #667eea; }
+            51%, 100% { border-color: transparent; }
+        }
+
+        .section-divider {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 2rem 0;
+        }
+
+        @media print {
+            body { 
+                font-size: 12px; 
+                line-height: 1.4;
+            }
+            .no-print { display: none; }
+            .page-break { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white shadow-lg z-50 no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <span class="text-2xl font-bold text-gray-800">TJ</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Skills</a>
+                        <a href="#experience" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Experience</a>
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Projects</a>
+                        <a href="#education" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Education</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg min-h-screen flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                    Hi, I'm <span class="text-yellow-300">Tejas Jagadale</span>
+                </h1>
+                <h2 class="text-2xl md:text-4xl font-light typing-animation">Full Stack Web Developer</h2>
+            </div>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+                Enthusiastic and dedicated Full Stack Web Developer with over 1.3 years of experience in designing and developing dynamic, responsive web applications.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                    Get In Touch
+                </a>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/tejas-ja-gadale43/" target="_blank" class="text-2xl hover:text-yellow-300 transition duration-300">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/TejasJagadale" target="_blank" class="text-2xl hover:text-yellow-300 transition duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">About Me</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Professional Summary</h3>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Passionate about frontend development and skilled in React.js, JavaScript, and UI/UX best practices. 
+                        I'm seeking to contribute to innovative web projects and grow with a forward-thinking organization.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        With expertise in both frontend and backend technologies, I specialize in creating seamless user experiences 
+                        and robust web applications that solve real-world problems.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Experience</h4>
+                            <p class="text-blue-600 font-medium">1.3+ Years</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-gray-800">Languages</h4>
+                            <p class="text-blue-600 font-medium">4 Languages</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Personal Details</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">tejasjagadale25@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-blue-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">+91 9944600167</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-birthday-cake text-blue-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">June 25, 2000</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-language text-blue-600 w-6"></i>
+                            <span class="ml-3 text-gray-700">English, Tamil, Marathi, Hindi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Frontend</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-card bg-blue-50 p-3 rounded-lg hover:bg-blue-100">
+                            <span class="text-blue-800 font-medium">React.js</span>
+                        </div>
+                        <div class="skill-card bg-yellow-50 p-3 rounded-lg hover:bg-yellow-100">
+                            <span class="text-yellow-800 font-medium">JavaScript</span>
+                        </div>
+                        <div class="skill-card bg-orange-50 p-3 rounded-lg hover:bg-orange-100">
+                            <span class="text-orange-800 font-medium">HTML</span>
+                        </div>
+                        <div class="skill-card bg-blue-50 p-3 rounded-lg hover:bg-blue-100">
+                            <span class="text-blue-800 font-medium">CSS</span>
+                        </div>
+                        <div class="skill-card bg-cyan-50 p-3 rounded-lg hover:bg-cyan-100">
+                            <span class="text-cyan-800 font-medium">Tailwind CSS</span>
+                        </div>
+                        <div class="skill-card bg-purple-50 p-3 rounded-lg hover:bg-purple-100">
+                            <span class="text-purple-800 font-medium">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-server text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Backend & Tools</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-card bg-green-50 p-3 rounded-lg hover:bg-green-100">
+                            <span class="text-green-800 font-medium">Node.js</span>
+                        </div>
+                        <div class="skill-card bg-orange-50 p-3 rounded-lg hover:bg-orange-100">
+                            <span class="text-orange-800 font-medium">Postman</span>
+                        </div>
+                        <div class="skill-card bg-blue-50 p-3 rounded-lg hover:bg-blue-100">
+                            <span class="text-blue-800 font-medium">VS Code</span>
+                        </div>
+                        <div class="skill-card bg-red-50 p-3 rounded-lg hover:bg-red-100">
+                            <span class="text-red-800 font-medium">Git</span>
+                        </div>
+                        <div class="skill-card bg-gray-50 p-3 rounded-lg hover:bg-gray-100">
+                            <span class="text-gray-800 font-medium">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & AI -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cloud text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-semibold text-gray-800">Cloud & AI</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="skill-card bg-blue-50 p-3 rounded-lg hover:bg-blue-100">
+                            <span class="text-blue-800 font-medium">Google Cloud Vision AI</span>
+                        </div>
+                        <div class="skill-card bg-gray-50 p-3 rounded-lg hover:bg-gray-100">
+                            <span class="text-gray-800 font-medium">REST APIs</span>
+                        </div>
+                        <div class="skill-card bg-green-50 p-3 rounded-lg hover:bg-green-100">
+                            <span class="text-green-800 font-medium">PDF Processing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Work Experience</h2>
+            <div class="space-y-12">
+                <!-- Current Position -->
+                <div class="page-break bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Frontend Developer</h3>
+                            <p class="text-blue-600 font-medium text-lg">Current Employer</p>
+                        </div>
+                        <div class="text-right mt-4 md:mt-0">
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">
+                                February 2025 - Present
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Developing and maintaining responsive web interfaces using React.js and Tailwind CSS
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Collaborating with UI/UX designers to implement engaging user experiences
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            Writing reusable and maintainable code with a focus on performance
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Previous Position -->
+                <div class="page-break bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Full Stack Web Developer</h3>
+                            <p class="text-blue-600 font-medium text-lg">Previous Employer</p>
+                        </div>
+                        <div class="text-right mt-4 md:mt-0">
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">
+                                October 2023 - December 2024
+                            </span>
+                        </div>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            Built and maintained full-stack web applications using React.js (frontend) and Node.js (backend)
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            Worked on processing invoice PDFs using Google Cloud Vision AI and displaying structured data on the frontend
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            Developed reusable components, REST APIs, and integrated frontend with backend services
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-3"></i>
+                            Ensured cross-browser compatibility and responsive design
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Featured Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-600 h-32"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Mpeoples Website</h3>
+                        <p class="text-gray-600 mb-4">Custom web platform built with React.js showcasing services and user interaction.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-blue-600 font-medium">April 2025</span>
+                            <div class="flex space-x-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">React.js</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-gradient-to-r from-green-500 to-teal-600 h-32"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Aaditya Builders Website</h3>
+                        <p class="text-gray-600 mb-4">A clean, professional real estate portfolio site for Aaditya Builders.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-green-600 font-medium">April - May 2025</span>
+                            <div class="flex space-x-2">
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">Portfolio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-gradient-to-r from-purple-500 to-pink-600 h-32"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Portfolio Website</h3>
+                        <p class="text-gray-600 mb-4">Personal portfolio highlighting projects and skills with responsive design.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-purple-600 font-medium">April - May 2025</span>
+                            <div class="flex space-x-2">
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">Personal</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300">
+                    <div class="bg-gradient-to-r from-orange-500 to-red-600 h-32"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Makkal Calendar Website</h3>
+                        <p class="text-gray-600 mb-4">Cultural calendar app built with React.js, showcasing Tamil dates and events.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-orange-600 font-medium">April - May 2025</span>
+                            <div class="flex space-x-2">
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-xs">Cultural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 md:col-span-2">
+                    <div class="bg-gradient-to-r from-indigo-500 to-blue-600 h-32"></div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-3">Invoice Processing System</h3>
+                        <p class="text-gray-600 mb-4">Backend project using Google Cloud Vision AI to extract data from client invoice PDFs and display them on the frontend for validation and further processing.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-indigo-600 font-medium">May - August 2024</span>
+                            <div class="flex space-x-2">
+                                <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded text-xs">AI/ML</span>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">Backend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-16">Education & Certifications</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Degree -->
+                <div class="page-break bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-graduation-cap text-3xl text-blue-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Bachelor of Engineering (B.E)</h3>
+                            <p class="text-blue-600 font-medium">Sona College of Technology, Salem</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700 font-medium">August 2017 - May 2021</p>
+                            <p class="text-gray-600">Percentage: 74%</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium">Graduated</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course -->
+                <div class="page-break bg-gradient-to-br from-green-50 to-emerald-100 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-certificate text-3xl text-green-600 mr-4"></i>
+                        <div>
+                            <h3 class="text-2xl font-semibold text-gray-800">Full Stack Web Development</h3>
+                            <p class="text-green-600 font-medium">Edureka</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <p class="text-gray-700 font-medium">June 2023 - September 2023</p>
+                            <p class="text-gray-600">Professional Certification</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="bg-green-100 text-green-800 px-4 py-2 rounded-full font-medium">Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg text-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Let's Work Together</h2>
+                <p class="text-xl max-w-3xl mx-auto">
+                    I'm always interested in new opportunities and interesting projects. 
+                    Let's discuss how we can bring your ideas to life!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="flex items-center">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-full mr-6">
+                            <i class="fas fa-envelope text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Email</h3>
+                            <p class="text-lg">tejasjagadale25@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-full mr-6">
+                            <i class="fas fa-phone text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Phone</h3>
+                            <p class="text-lg">+91 9944600167</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center">
+                        <div class="bg-white bg-opacity-20 p-4 rounded-full mr-6">
+                            <i class="fas fa-map-marker-alt text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-2">Location</h3>
+                            <p class="text-lg">India</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-8">
+                        <h3 class="text-xl font-semibold mb-6">Connect with me</h3>
+                        <div class="flex space-x-6">
+                            <a href="https://www.linkedin.com/in/tejas-ja-gadale43/" target="_blank" 
+                               class="bg-white bg-opacity-20 p-4 rounded-full hover:bg-opacity-30 transition duration-300">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="https://github.com/TejasJagadale" target="_blank" 
+                               class="bg-white bg-opacity-20 p-4 rounded-full hover:bg-opacity-30 transition duration-300">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white bg-opacity-10 p-8 rounded-2xl backdrop-blur-sm">
+                    <h3 class="text-2xl font-semibold mb-6">Send me a message</h3>
+                    <form class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Your Name" 
+                                   class="w-full p-4 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" 
+                                   class="w-full p-4 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50">
+                        </div>
+                        <div>
+                            <textarea rows="4" placeholder="Your Message" 
+                                      class="w-full p-4 rounded-lg bg-white bg-opacity-20 border border-white border-opacity-30 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 resize-none"></textarea>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-white text-blue-600 py-4 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <p class="text-lg mb-4">© 2025 Tejas Jagadale. All rights reserved.</p>
+            <p class="text-gray-400">Built with passion using modern web technologies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('backdrop-blur-sm', 'bg-white', 'bg-opacity-95');
+            } else {
+                nav.classList.remove('backdrop-blur-sm', 'bg-white', 'bg-opacity-95');
+            }
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
